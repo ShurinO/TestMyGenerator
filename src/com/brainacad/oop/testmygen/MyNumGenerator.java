@@ -1,9 +1,6 @@
 package com.brainacad.oop.testmygen;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class MyNumGenerator {
   private int numOfElm;
@@ -21,5 +18,16 @@ public class MyNumGenerator {
       list.add(random.nextInt(maxNumb+1));
     }
     return list;
+  }
+
+  public Set<Integer> generateDistinct(){
+    Set<Integer> set = new HashSet<>(numOfElm);
+    Random random = new Random();
+    for (int i = 0; i < numOfElm; i++) {
+      while (!set.add(random.nextInt(maxNumb + 1))) {
+
+      }
+    }
+    return set;
   }
 }
